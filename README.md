@@ -4,3 +4,5 @@
 
 从官网下载yolov4.weights、yolov4-tiny.weights权重文件放在yolo文件夹下
 
+- can-start.sh是在AGX上挂载CAN模块和设置波特率
+- can-stop.sh是在AGX上candown CAN模块
