@@ -29,6 +29,8 @@ using namespace cv;
 int person = 0;
 int have_person = 1;
 int no_person = 0;
+double distance = 0;
+int position = 0;   // 0:表示左边，1：表示右边
 
 
 //画出检测框和相关信息
@@ -43,6 +45,8 @@ void DrawBoxes(Mat &frame, vector<string> classes, int classId, float conf, int 
 	std::cout<< "fucking = "<< classes[classId] << std::endl;
 	if(classes[classId] == "person"){
 		if(conf > 0.5){
+			// 判断bounding box的大小
+			//
 			person = have_person;
 			std::cout<< " person > 0.5" <<std::endl;
 		}else{
@@ -50,6 +54,11 @@ void DrawBoxes(Mat &frame, vector<string> classes, int classId, float conf, int 
 			std::cout<< " person < 0.5" <<std::endl;
 		}
 	}
+
+	// 添加识别车辆的代码
+	// if(classes[classesId] == "car"){
+		
+	// }
 	if (!classes.empty())
 	{
 		CV_Assert(classId < (int)classes.size());
