@@ -6,3 +6,7 @@
 
 - can-start.sh是在AGX上挂载CAN模块和设置波特率
 - can-stop.sh是在AGX上candown CAN模块
+
+## CAN报文情况
+
+八个字节：【第0字节[00:无人，01:有人]】
